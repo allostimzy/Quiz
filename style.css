@@ -88,3 +88,38 @@ p {
     border-radius: 10px;
     font-weight: bolder;
 }
+
+.selectNumber {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vh;
+    height: auto;
+    margin: auto;
+    border: 2px solid #3A3A3A;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.third button {
+    background-color: rgb(96, 17, 170);
+    width: 7rem;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.third button:hover {
+    background-color: white;
+    width: 7rem;
+    border: 2px dashed blueviolet;
+    font-size: 20px;
+    color: blueviolet;
+    border-radius: 20px;
+}

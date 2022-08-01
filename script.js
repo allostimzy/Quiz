@@ -1,4 +1,5 @@
 
+/* Function for timer */ 
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
