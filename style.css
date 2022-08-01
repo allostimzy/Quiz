@@ -58,7 +58,7 @@ h3 {
     font-size: x-large;
 }
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 .participant p {
     font-weight: bolder;
@@ -100,7 +100,7 @@ p {
     height: auto;
     margin: auto;
     border: 2px solid #3A3A3A;
-    margin-top: 30px;
+    margin-top: 200px;
     border-radius: 20px;
 }
 
@@ -111,7 +111,7 @@ p {
     font-size: 20px;
     padding: 10px;
     color: white;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 20px;
     border-radius: 20px;
 }
@@ -123,3 +123,44 @@ p {
     color: blueviolet;
     border-radius: 20px;
 }
+.qNo button {
+    background-color: rgb(1, 77, 1);
+    padding: 10px 15px ;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+}
+.qNo {
+    width: 90%;
+}
+.qNo button:hover {
+    background-color: white;
+    padding: 10px 15px ;
+    color: blueviolet;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px dotted blueviolet;
+}
+.range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 70%;
+}
+.range input {
+    padding: 15px;
+    font-size: 15px;
+    border: 2px solid blueviolet;
+    width: 50px;
+    border-radius: 10px;
+}
+.range h3 {
+    font-size: 20px;
+}
+hr {
+    background-color: #3A3A3A;
+}
+
