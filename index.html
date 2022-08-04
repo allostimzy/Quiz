@@ -9,7 +9,7 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="show">
+    <div class="show">  <!--Question Box-->
         <div class="header">
             <h2>Question <span id="questionNum">25</span></h2>
         </div>
@@ -30,30 +30,30 @@
             <div class="timer">
                 <p class="time"></p>
             </div>
-            <div class="participant">
-                <p>--COTGlobal--</p>
-            </div>
         </div>
     </div>
-    <div class="selectNumber">
+
+
+    <div class="selectNumber">  
         <div class="header">
             <h2>Select a number</h2>
         </div>
         <div class="range">
             <h3>Enter question range</h3>
-            <input type="number" placeholder="min">
+            <input id="min" type="number" placeholder="min">
             <p> To </p>
-            <input type="number" placeholder="max">
+            <input id="max" type="number" placeholder="max">
+            <button id="show">show questions</button>
         </div>
         <div class="line">
             <p>__________________________________________________________</p>
         </div>
         
         <div class="qNo">
-            <button class="Q"></button>
+            
         </div>
         <div class="third">
-            <button>Submit</button>
+            <button id="submit">Submit</button>
         </div>
     </div>
 </body>

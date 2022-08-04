@@ -26,3 +26,27 @@ window.onload = function () {
         display = document.querySelector('.time');
     startTimer(fiveMinutes, display);
 };
+
+
+let min = document.getElementById("min");
+let showQtn = document.getElementById("show");
+let max = document.getElementById("max")
+
+show.addEventListener("click", function() {
+    let showMin = min.value
+    let showMax = max.value
+    let qNo = document.querySelector(".qNo")
+    var range = (showMax - showMin)
+    var rangePlus= range + 1
+    console.log(rangePlus)
+
+
+    for(i=0; i < rangePlus; i++){
+        
+        var newBtn= document.createElement("button")
+        newBtn.setAttribute('id', "q"+`${i}`)
+        qNo.appendChild(newBtn)
+        var y = newBtn.append(showMin++)
+    }
+    
+})
