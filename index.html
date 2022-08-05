@@ -12,15 +12,14 @@
 <body>
     <div class="show">  <!--Question Box-->
         <div class="header">
-            <h2><span id="questionNum"></span></h2>
+            <h2>Question : <span id="questionNum"></span></h2>
         </div>
         <div class="letDisplay">
             <div class="question">
-                <h3>Got what it takes to work with us?
-                    Great! Send us a link to your resumé or portfolio to become part of our talent pool.</h3>
+                <h3 id="qt"></h3>
             </div>
             <div class="answer">
-                <p>sleep and eat</p>
+                <p id="ans"></p>
             </div>
         </div>
         <div class="thirdLine">
@@ -30,6 +29,10 @@
             </div>
             <div class="timer">
                 <p class="time"></p>
+            </div>
+            <div class="statusIncorrect">
+                <img src="./Images/incorrect.gif">
+                <p>Incorrect</p>
             </div>
         </div>
     </div>
@@ -57,5 +60,14 @@
             <button id="submit">Submit</button>
         </div>
     </div>
+
+
+    
+    <div class="btnsPark">
+        <button id="timerStarter">start timer</button>
+        <button id="clearQtn">Clear Question</button>
+        <button id="correct">Correct</button>
+    </div>
+    
 </body>
 </html>

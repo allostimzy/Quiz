@@ -1,4 +1,27 @@
 
+
+
+//select number and append to question header
+const onClick = (e) => {
+    var targetBtn = e.target.id
+    var targetClass = e.target.className
+    var inner = document.getElementById(`${targetBtn}`).innerText
+    var qNumber = document.querySelector("#questionNum")
+    var check = document.querySelector("#"+`${targetBtn}`)
+
+    if (targetClass === 'timzy') {
+    qNumber.append(inner)
+    check.style.backgroundColor="red"
+    check.parentElement.disable = "true"
+    }else{}
+}
+window.addEventListener('click',onClick) 
+
+
+
+
+
+
 /* Function for timer */ 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -20,11 +43,14 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
+var timerStarter = document.getElementById("timerStarter")
+
+timerStarter.addEventListener("click" , function () {
     var fiveMinutes = 60 * 0.25,
         display = document.querySelector('.time');
     startTimer(fiveMinutes, display);
-};
+    
+});
 
 
 
@@ -43,42 +69,31 @@ show.addEventListener("click", function() {
     for(i=0; i < rangePlus; i++){
         
         var newBtn= document.createElement("button")
-        newBtn.setAttribute('id', "q"+`${i}`)
+        newBtn.setAttribute('class', 'timzy')
+        newBtn.setAttribute('id', "q"+`${i}` )
         qNo.appendChild(newBtn)
         var y = newBtn.append(showMin++)
     }
-    
 })
 
 
-
-
 fetch('./questions.json')
-.then(response => response.json())
-.then(qtnData => {
+    .then(response => response.json())
+    .then(qtnData => {
+        
     
-   for(var i=`${inner}`; i < 1; i++){
-    
-    var idd = qtnData[2].sn
-    var quest = qtnData[(i)].questions
-    var answers = qtnData[2].answer
-    console.log(quest)
-    
-   }
-    
-     
+
+
+
+       for(var i=0, l = 1; i < l; i++){
+        
+        var id = qtnData[2].sn
+        var quest = qtnData[10].questions
+        var answers = qtnData[10].answer
+        var qt = document.getElementById("qt")
+        var ans = document.getElementById('ans')
+        qt.append(quest)
+        ans.append(answers)
+       }  
     })
-
-
-//select number and append to question header
-const onClick = (e) => {
-    var targetBtn = e.target.id
-    var inner = document.getElementById(`${targetBtn}`).innerText
-    let qNumber = document.querySelector("#questionNum")
-
-    qNumber.append(inner)
     
-}
-window.addEventListener('click',onClick)
-
-   
