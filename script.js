@@ -15,7 +15,7 @@ function startTimer(duration, display) {
             timer = duration;
         }
         else {
-          timer = "Time Up"
+          
         }
     }, 1000);
 }
@@ -51,30 +51,34 @@ show.addEventListener("click", function() {
 })
 
 
+
+
 fetch('./questions.json')
 .then(response => response.json())
 .then(qtnData => {
     
-    console.log(qtnData)
-
-   
-        
-        
+   for(var i=`${inner}`; i < 1; i++){
+    
+    var idd = qtnData[2].sn
+    var quest = qtnData[(i)].questions
+    var answers = qtnData[2].answer
+    console.log(quest)
+    
+   }
+    
+     
     })
 
 
+//select number and append to question header
+const onClick = (e) => {
+    var targetBtn = e.target.id
+    var inner = document.getElementById(`${targetBtn}`).innerText
+    let qNumber = document.querySelector("#questionNum")
 
- // data.results.map(theNews => {
-    //     console.log(theNews.title);
+    qNumber.append(inner)
+    
+}
+window.addEventListener('click',onClick)
 
-        // let a = document.createElement("a");
-        // a.setAttribute('href',theNews.url);
-        // a.innerHTML = theNews.title;
-        // news.appendChild(a);
-
-    //     let b = document.createElement('img');
-    //     b.setAttribute('src', theNews.multimedia[1].url);
-        
-
-    //     news.appendChild(b)
-    //     news.appendChild(a)
+   
