@@ -74,26 +74,35 @@ show.addEventListener("click", function() {
         qNo.appendChild(newBtn)
         var y = newBtn.append(showMin++)
     }
+
+    
 })
 
 
-fetch('./questions.json')
+var submit = document.getElementById("submit")
+let qNo = document.querySelector(".qNo")
+
+submit.addEventListener("click", function() {
+
+if () {
+    fetch('./questions.json')
     .then(response => response.json())
     .then(qtnData => {
+      
+
+       for(var i=`${qNo}`, l = 1; i < l; i++){
         
-    
-
-
-
-       for(var i=0, l = 1; i < l; i++){
-        
-        var id = qtnData[2].sn
-        var quest = qtnData[10].questions
-        var answers = qtnData[10].answer
+        var id = qtnData[i].sn
+        var quest = qtnData[i].questions
+        var answers = qtnData[i].answer
         var qt = document.getElementById("qt")
         var ans = document.getElementById('ans')
         qt.append(quest)
         ans.append(answers)
        }  
     })
+}else {
+
+}
+})
     
